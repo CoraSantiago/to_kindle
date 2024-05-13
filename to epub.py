@@ -63,8 +63,7 @@ def create_epub_file(text, filename='Nome que quiser.epub'):
     
     # Adicionando o conteúdo ao livro .epub
     book.add_item(epub.EpubHtml(title='Título', file_name='index.xhtml', content=content, lang='en'))
-    #Os itens "teste_1" e "teste_2" precisam existir para que o arquivo seja gerado 
-    book.toc = [epub.Link('index.xhtml', 'teste_1', 'teste_2')]
+    book.toc = [epub.Link('index.xhtml', 'Texto de Navegação', 'ID')] 
     #book.toc = [epub.Link('index.xhtml')]
     book.add_item(epub.EpubNcx())
     book.add_item(epub.EpubNav())
